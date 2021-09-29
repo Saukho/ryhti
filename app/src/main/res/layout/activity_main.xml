@@ -59,7 +59,7 @@
             android:id="@+id/textView3"
             android:layout_width="411dp"
             android:layout_height="46dp"
-            android:text="Set reminder to get up"
+            android:text="Tetris"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textDirection="firstStrongRtl"
