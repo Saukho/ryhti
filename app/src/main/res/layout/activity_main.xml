@@ -59,7 +59,7 @@
             android:id="@+id/textView3"
             android:layout_width="411dp"
             android:layout_height="46dp"
-            android:text="Tetris"
+            android:text="Tottoo"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textDirection="firstStrongRtl"
