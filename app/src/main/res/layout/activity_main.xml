@@ -9,180 +9,88 @@
     <!--Added Toggle Button to set the alarm on or off-->
     <!--ByDefault toggleButton is set to false-->
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="Minuutit"
-        app:layout_constraintBottom_toTopOf="@+id/setMinute"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.637"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <EditText
         android:id="@+id/setHour"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="88dp"
         android:ems="10"
-        android:hint="Hours"
+        android:hint="Tunnit"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/setMinute"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.731"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alarmIdSetter" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewSetTime" />
 
     <EditText
         android:id="@+id/setMinute"
         android:layout_width="144dp"
         android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="88dp"
         android:ems="10"
-        android:hint="Minute"
-        android:inputType="textPersonName"
+        android:hint="Minuutit"
+        android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.737"
+        app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alarmIdSetter" />
-
-    <EditText
-        android:id="@+id/alarmIdSetter"
-        android:layout_width="116dp"
-        android:layout_height="47dp"
-        android:ems="10"
-        android:hint="id"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.232" />
-
-    <Button
-        android:id="@+id/getAlarmInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:onClick="getAlarmInfoOnDisplay"
-        android:text="getInfo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setMinute"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewSetTime" />
 
     <Switch
         android:id="@+id/isAlarmEnabled"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="isEnabled"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="209dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="92dp"
+        android:editable="false"
+        android:minHeight="48dp"
+        android:text="Onko asetettu"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.411"
-        app:layout_constraintStart_toEndOf="@+id/cancleAlarmBtn"
-        app:layout_constraintTop_toBottomOf="@+id/getAlarmInfo"
-        app:layout_constraintVertical_bias="0.093" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <Button
         android:id="@+id/setAlarmButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="125dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="36dp"
         android:onClick="setAlarm"
-        android:text="SetAlarm"
+        android:text="Aseta "
+        android:textAllCaps="false"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/setHour" />
 
     <Button
         android:id="@+id/cancleAlarmBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:onClick="cancleAlarmById"
-        android:text="turn of"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.277"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setAlarmButton"
-        app:layout_constraintVertical_bias="0.201" />
+        android:layout_width="125dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="36dp"
+        android:onClick="cancleAlarm"
+        android:text="Peruuta"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/setAlarmButton"
+        app:layout_constraintStart_toEndOf="@+id/setAlarmButton" />
 
-    <EditText
-        android:id="@+id/alarmContextTitle"
-        android:layout_width="129dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="notfTitle"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/alarmIdSetter"
+    <TextView
+        android:id="@+id/textViewSetTime"
+        android:layout_width="186dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="84dp"
+        android:text="Aseta muistutus"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/alarmContextText"
-        android:layout_width="131dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:hint="notiftext"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/alarmIdSetter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
-        app:layout_constraintStart_toEndOf="@+id/alarmContextTitle"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:text="Ilmoituksen title"
-        app:layout_constraintBottom_toTopOf="@+id/alarmContextTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.809" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="88dp"
-        android:text="ilmoituksen teksti"
-        app:layout_constraintBottom_toTopOf="@+id/alarmContextText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.607" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="ilmoituksen id"
-        app:layout_constraintBottom_toTopOf="@+id/alarmIdSetter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="tunnit"
-        app:layout_constraintBottom_toTopOf="@+id/setHour"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.294"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
