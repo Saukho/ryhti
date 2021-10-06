@@ -7,7 +7,7 @@
     tools:context=".ListActivity">
 
     <ListView
-        android:id="@+id/cardHeader"
+        android:id="@+id/listViewCards"
         android:layout_width="419dp"
         android:layout_height="72dp"
         android:text="TEXT"
