@@ -10,7 +10,7 @@ public class CardData {
 
     private CardData(){
         cards = new ArrayList<>();
-        cards.add(new Card("Yoga","Yoga positions" ));
+        cards.add(new Card("Yoga",R.drawable.a1,"Yoga positions" ));
     }
 
     public ArrayList<Card> getCards() {
