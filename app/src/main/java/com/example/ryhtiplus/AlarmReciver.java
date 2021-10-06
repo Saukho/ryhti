@@ -7,16 +7,10 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.media.AudioAttributes;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
-import android.net.Uri;
 import android.os.Build;
-import android.os.Vibrator;
-import android.util.Log;
-import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
 public class AlarmReciver extends BroadcastReceiver {
@@ -37,7 +31,7 @@ public class AlarmReciver extends BroadcastReceiver {
 
         }
         //call MainActivity when notification is pressed
-        Intent mainIntent = new Intent(context, com.example.ryhtiplus.MainActivity.class);
+        Intent mainIntent = new Intent(context, SetNotifActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(
                 context, 0,mainIntent,0
         );

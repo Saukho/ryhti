@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RyhtiPlus</string>
+    <string name="buttonMainSetNotif">Aseta muistutuksen</string>
 </resources>
