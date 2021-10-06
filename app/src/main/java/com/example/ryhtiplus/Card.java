@@ -7,10 +7,10 @@ public class Card {
 
     public Card(String name, int image, String cardText) {
         this.name = name;
-       this.image = image;
+        this.image = image;
         this.cardText = cardText;
     }
-
+    public int getImage(){return image;}
 
     public String getCardText() {
         return cardText;

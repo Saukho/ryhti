@@ -14,9 +14,9 @@ import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
     private ListView listViewCard;
-    private TextView textViewCard;
 
     private ArrayList<String> cards;
+
     public static final String EXTRA = "cardInd";
 
     @Override

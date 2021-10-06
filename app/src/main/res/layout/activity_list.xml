@@ -8,8 +8,8 @@
 
     <ListView
         android:id="@+id/listViewCards"
-        android:layout_width="419dp"
-        android:layout_height="72dp"
+        android:layout_width="411dp"
+        android:layout_height="446dp"
         android:text="TEXT"
         android:textAlignment="center"
         android:textSize="20sp"
