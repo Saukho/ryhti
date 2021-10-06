@@ -8,7 +8,7 @@ public class Alarm {
     private String notifTitle;
     private String notifText;
     private boolean isEnabled;
-
+    private int i = 0;
     public Alarm(int id, long time, String notifTitle, String notifText, boolean isEnabled){
         this.id = id;
         this.time = time;
