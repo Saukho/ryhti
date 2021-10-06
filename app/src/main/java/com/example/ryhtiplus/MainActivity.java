@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button buttonSetNotif;
 
@@ -17,15 +17,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         buttonSetNotif = (Button)findViewById(R.id.buttonMainSetNotifActivity);
-        buttonSetNotif.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent nextActivity = new Intent(MainActivity.this, SetNotifActivity.class);
-                startActivity(nextActivity);
-            }
-        });
-
+        buttonSetNotif.setOnClickListener(this);
 
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.buttonMainSetNotifActivity:
+                Intent nextActivity = new Intent(MainActivity.this, SetNotifActivity.class);
+                startActivity(nextActivity);
+                break;
+        }
+    }
 }
