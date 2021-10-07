@@ -21,10 +21,10 @@ public class Alarm {
     public long getTime(){
         return this.time;
     }
-    public String getNotifTitle(){
+    public String getNotifyTitle(){
         return this.notifyTitle;
     }
-    public String getNotifText(){
+    public String getNotifyText(){
         return this.notifyText;
     }
     public boolean getIsEnabled(){

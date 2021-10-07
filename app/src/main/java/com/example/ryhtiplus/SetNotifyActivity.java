@@ -24,7 +24,7 @@ public class SetNotifyActivity extends MainActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_set_notif);
+        setContentView(R.layout.activity_set_notify);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         setHour = findViewById(R.id.setHour);
         setMinute = findViewById(R.id.setMinute);

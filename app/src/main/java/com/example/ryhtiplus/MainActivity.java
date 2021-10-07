@@ -8,14 +8,17 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
     private Button listViewBtn;
-
+    private Button setNotify;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        setNotify = (Button)findViewById(R.id.setNotifyActivity);
+        setNotify.setOnClickListener(this);
         listViewBtn = (Button) findViewById(R.id.listViewBtn);
 
         listViewBtn.setOnClickListener(new AdapterView.OnClickListener(){
@@ -30,5 +33,15 @@ public class MainActivity extends AppCompatActivity {
     public void openActivity(){
         Intent intent = new Intent(this, ListActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.setNotifyActivity:
+                Intent nextActivity = new Intent(MainActivity.this, SetNotifyActivity.class);
+                startActivity(nextActivity);
+                break;
+        }
     }
 }
