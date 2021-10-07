@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">RyhtiPlus</string>
-    <string name="buttonMainSetNotify">Aseta muistutuksen</string>
-    <string name="listViewBtn">Harjoitukset</string>
+    <string name="buttonMainSetNotify">Aseta muistutus</string>
+    <string name="listView">Harjoitukset</string>
 
 </resources>

@@ -20,7 +20,7 @@
 
     <Button
         android:id="@+id/listViewBtn"
-        android:layout_width="296dp"
+        android:layout_width="298dp"
         android:layout_height="51dp"
         android:text="Harjoitukset"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,8 +44,8 @@
 
     <Button
         android:id="@+id/linkViewBtn"
-        android:layout_width="286dp"
-        android:layout_height="45dp"
+        android:layout_width="298dp"
+        android:layout_height="51dp"
         android:text="Hyviä vinkkejä"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

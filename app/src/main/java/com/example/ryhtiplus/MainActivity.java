@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         setNotify = (Button) findViewById(R.id.setNotifyActivity);
         setNotify.setOnClickListener(this);
         listViewBtn = (Button) findViewById(R.id.listViewBtn);
@@ -31,26 +30,6 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         linkViewBtn = (Button) findViewById(R.id.linkViewBtn);
         linkViewBtn.setOnClickListener(this);
 
-
-//        listViewBtn.setOnClickListener(new AdapterView.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(MainActivity.this, ListActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//
-//        linkViewBtn = (Button) findViewById(R.id.linkViewBtn);
-//
-//        linkViewBtn.setOnClickListener(new AdapterView.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent linkinIntent = new Intent(MainActivity.this, LinkView.class);
-//                startActivity(linkinIntent);
-//            }
-//        });
-//        }
 
     }
         @Override
