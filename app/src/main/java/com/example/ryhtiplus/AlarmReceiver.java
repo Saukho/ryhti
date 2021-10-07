@@ -37,7 +37,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         );
 
         //prepare notification
-        NotificationCompat.Builder notifBuilder = new NotificationCompat.Builder(context, CHANNEL_ID)
+        NotificationCompat.Builder notifyBuilder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.ic_dialog_alert)
                 .setContentTitle("Muista ylläpitää ryhtiä!")
                 .setContentText("Tämä on muistutus!")
@@ -46,6 +46,6 @@ public class AlarmReceiver extends BroadcastReceiver {
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
                 .setAutoCancel(true);
         //notify
-        notifyManager.notify(id, notifBuilder.build());
+        notifyManager.notify(id, notifyBuilder.build());
     }
 }

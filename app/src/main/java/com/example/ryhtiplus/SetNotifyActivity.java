@@ -8,14 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class SetNotifyActivity extends MainActivity{
 
     PendingIntent pendingIntent;
     AlarmManager alarmManager;
-    TextView toggleText;
     EditText setHour;
     EditText setMinute;
     Switch isAlarmEnabled;
@@ -92,6 +90,10 @@ public class SetNotifyActivity extends MainActivity{
         return mls;
     }
     public long turnMinuteToMls(int m){
+        long mls = m * 1000 * 60;
+        return mls;
+    }
+    public long turnSecondsToMls(int m){
         long mls = m * 1000 * 60;
         return mls;
     }
