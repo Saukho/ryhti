@@ -42,4 +42,10 @@ public class ListActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+        finish();
+        Intent intent = new Intent(ListActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

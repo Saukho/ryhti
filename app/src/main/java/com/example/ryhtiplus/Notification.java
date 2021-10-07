@@ -1,13 +1,14 @@
 package com.example.ryhtiplus;
 
-public class Alarm {
+public class Notification {
     private int id;
     private long time;
     private String notifyTitle;
     private String notifyText;
     private boolean isEnabled;
     private int i = 0;
-    public Alarm(int id, long time, String notifyTitle, String notifyText, boolean isEnabled){
+    //Tällä hetkellä käytetään tästä vain "time", poistetaan muut myöhemmin
+    public Notification(int id, long time, String notifyTitle, String notifyText, boolean isEnabled){
         this.id = id;
         this.time = time;
         this.notifyTitle = notifyTitle;
@@ -16,18 +17,10 @@ public class Alarm {
     }
 
     public int getId(){
-        return this.id+10;
+        return this.id;
     }
+
     public long getTime(){
         return this.time;
-    }
-    public String getNotifyTitle(){
-        return this.notifyTitle;
-    }
-    public String getNotifyText(){
-        return this.notifyText;
-    }
-    public boolean getIsEnabled(){
-        return this.isEnabled;
     }
 }

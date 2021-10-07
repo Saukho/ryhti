@@ -6,21 +6,21 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".SetNotifyActivity">
 
-<!--Added Toggle Button to set the alarm on or off-->
+<!--Added Toggle Button to set the notification on or off-->
 <!--ByDefault toggleButton is set to false-->
 
-<EditText
-    android:id="@+id/setHour"
-    android:layout_width="144dp"
-    android:layout_height="48dp"
-    android:layout_marginTop="88dp"
-    android:ems="10"
-    android:hint="Tunnit"
-    android:inputType="textPersonName"
-    app:layout_constraintEnd_toStartOf="@+id/setMinute"
-    app:layout_constraintHorizontal_bias="0.731"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/textViewSetTime" />
+    <EditText
+        android:id="@+id/setHour"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="88dp"
+        android:ems="10"
+        android:hint="Tunnit"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/setMinute"
+        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSetTime" />
 
 <EditText
     android:id="@+id/setMinute"
@@ -35,18 +35,18 @@ tools:context=".SetNotifyActivity">
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/textViewSetTime" />
 
-<Switch
-    android:id="@+id/isAlarmEnabled"
-    android:layout_width="209dp"
-    android:layout_height="59dp"
-    android:layout_marginTop="92dp"
-    android:editable="false"
-    android:minHeight="48dp"
-    android:text="Onko asetettu"
-    android:textSize="20sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="@+id/guideline2" />
+    <Switch
+        android:id="@+id/isAlarmEnabled"
+        android:layout_width="209dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="92dp"
+        android:editable="false"
+        android:minHeight="48dp"
+        android:text="Onko asetettu"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
 <Button
     android:id="@+id/setAlarmButton"
@@ -66,7 +66,7 @@ tools:context=".SetNotifyActivity">
     android:layout_width="125dp"
     android:layout_height="58dp"
     android:layout_marginStart="36dp"
-    android:onClick="cancleAlarm"
+    android:onClick="cancelAlarm"
     android:text="Peruuta"
     android:textAllCaps="false"
     android:textSize="20sp"
