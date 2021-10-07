@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RyhtiPlus">
         <activity
+            android:name=".LinkView"
+            android:exported="true" />
+        <activity
             android:name=".ImageCardActivity"
             android:exported="true" />
         <activity
@@ -24,9 +27,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".AlarmReceiver"
+
+        <receiver
+            android:name=".AlarmReceiver"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true" />
+
         <activity
             android:name=".SetNotifyActivity"
             android:exported="true" />

@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SetNotifyActivity extends MainActivity{
 
     PendingIntent pendingIntent;
     AlarmManager alarmManager;
+    TextView toggleText;
     EditText setHour;
     EditText setMinute;
     Switch isAlarmEnabled;
@@ -33,12 +35,15 @@ public class SetNotifyActivity extends MainActivity{
         cancelAlarmBtn = (Button) findViewById(R.id.cancleAlarmBtn);
         alarmHandler = new AlarmHandler(this, alarmManager);
         isAlarmEnabled.setChecked(false);
+
+
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         isAlarmEnabled.setChecked(true);
+
     }
 
     public void setAlarm(View view){
@@ -68,6 +73,7 @@ public class SetNotifyActivity extends MainActivity{
             alarmHandler.setNewAlarm(alarm);
         }
         isAlarmEnabled.setChecked(true);
+        isAlarmEnabled.setText("Päällä");
         Toast.makeText(SetNotifyActivity.this, "Muistutus on asetettu", Toast.LENGTH_SHORT).show();
     }
 
@@ -78,7 +84,8 @@ public class SetNotifyActivity extends MainActivity{
         alarmManager.cancel(pendingIntent);
         Toast.makeText(MainActivity.this, "ALARM OFF", Toast.LENGTH_SHORT).show();*/
         isAlarmEnabled.setChecked(false);
-        Toast.makeText(SetNotifyActivity.this, "Muistutus on peruuttu", Toast.LENGTH_SHORT).show();
+        isAlarmEnabled.setText("Peruutettu");
+        Toast.makeText(SetNotifyActivity.this, "Muistutus on peruttu", Toast.LENGTH_SHORT).show();
     }
     public long turnHourToMls(int h){
         long mls = h * 1000 * 60 * 60;
