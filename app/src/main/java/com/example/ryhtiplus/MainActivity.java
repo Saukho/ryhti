@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
     /**
-     buttons to set alarm, links and listview
+    napit muistutukseen, linkkeihin ja harjoituksiin
      *
      *
      */

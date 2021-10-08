@@ -14,6 +14,11 @@ public class LinkView extends AppCompatActivity implements View.OnClickListener 
     private Button linkView1;
     private Button linkView2;
 
+    /**
+     * @author Sami
+     * @param savedInstanceState
+     * napit linkkeihin
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

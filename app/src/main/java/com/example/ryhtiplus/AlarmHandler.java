@@ -22,6 +22,13 @@ public class AlarmHandler {
         intent = new Intent(context, NotifyReceiver.class);
     }
 
+    /**
+     * @use
+     * @author
+     * @param a
+     */
+
+
     public void setNewAlarm(Notification a){
         //Tämän avulla otetaan käyttöön Manifest-luokassa määritelty Receiver = käyttäjä saa muistutukset
         ComponentName receiver = new ComponentName(context, NotifyReceiver.class);
