@@ -23,7 +23,7 @@ public class AlarmHandler {
     }
 
     public void setNewAlarm(Notification a){
-        //Tämän avulla otetaan käyttöön Manifest-luokassa määritelty Receiver = käyttäjä saa muistutukset
+        //Tämän avulla otetaan käyttöön Manifest-luokassa määritelty Receiver = käyttäjä saa muistutukset.
         ComponentName receiver = new ComponentName(context, NotifReceiver.class);
         PackageManager pm = context.getPackageManager();
         pm.setComponentEnabledSetting(receiver,
