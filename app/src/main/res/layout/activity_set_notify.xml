@@ -40,6 +40,8 @@
         android:id="@+id/isAlarmEnabled"
         android:layout_width="158dp"
         android:layout_height="55dp"
+        android:clickable="false"
+        android:longClickable="false"
         android:minHeight="48dp"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,11 +65,11 @@
         app:layout_constraintTop_toBottomOf="@+id/setHour" />
 
     <Button
-        android:id="@+id/cancleAlarmBtn"
+        android:id="@+id/cancelAlarmButton"
         android:layout_width="125dp"
         android:layout_height="58dp"
         android:layout_marginStart="36dp"
-        android:onClick="cancleAlarm"
+        android:onClick="cancelAlarm"
         android:text="Peruuta"
         android:textAllCaps="false"
         android:textSize="20sp"

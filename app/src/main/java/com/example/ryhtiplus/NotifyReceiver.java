@@ -1,22 +1,18 @@
 package com.example.ryhtiplus;
 
 
-import static android.media.RingtoneManager.TYPE_NOTIFICATION;
-
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.media.Ringtone;
 import android.media.RingtoneManager;
-import android.net.Uri;
 import android.os.Build;
 
 import androidx.core.app.NotificationCompat;
 
-public class NotifReceiver extends BroadcastReceiver {
+public class NotifyReceiver extends BroadcastReceiver {
     private  static final String CHANNEL_ID = "SAMPLE_CHANNEL";
 
     @Override
@@ -39,7 +35,7 @@ public class NotifReceiver extends BroadcastReceiver {
                 context, 0,mainIntent,0
         );
         //prepare notification
-        NotificationCompat.Builder notifyBuilder = new NotificationCompat.Builder(context, CHANNEL_ID)
+        NotificationCompat.Builder notifBuilder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.ic_dialog_alert)
                 .setContentTitle("Muista ylläpitää ryhtiä!")
                 .setContentText("Tämä on muistutus!")
@@ -48,8 +44,7 @@ public class NotifReceiver extends BroadcastReceiver {
                 .setContentIntent(contentIntent)
                 .setAutoCancel(true);
         //notify
-        notifyManager.notify(id, notifyBuilder.build());
+        notifyManager.notify(id, notifBuilder.build());
     }
 
 }
-

@@ -19,12 +19,12 @@ public class AlarmHandler {
     public AlarmHandler(Context context, AlarmManager alarmManager){
         this.context = context;
         this.alarmManager = alarmManager;
-        intent = new Intent(context, NotifReceiver.class);
+        intent = new Intent(context, NotifyReceiver.class);
     }
 
     public void setNewAlarm(Notification a){
         //Tämän avulla otetaan käyttöön Manifest-luokassa määritelty Receiver = käyttäjä saa muistutukset
-        ComponentName receiver = new ComponentName(context, NotifReceiver.class);
+        ComponentName receiver = new ComponentName(context, NotifyReceiver.class);
         PackageManager pm = context.getPackageManager();
         pm.setComponentEnabledSetting(receiver,
                 PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
@@ -37,7 +37,7 @@ public class AlarmHandler {
 
     public void cancelAlarm(){
         //Tämän avulla poistetaan poistetaan Manifest-luokassa määritelty Receiver käytöstä = ei enää mustutuksia
-        ComponentName receiver = new ComponentName(context, NotifReceiver.class);
+        ComponentName receiver = new ComponentName(context, NotifyReceiver.class);
         PackageManager pm = context.getPackageManager();
         pm.setComponentEnabledSetting(receiver,
                 PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
