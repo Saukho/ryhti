@@ -34,6 +34,10 @@ public class LinkView extends AppCompatActivity implements View.OnClickListener 
 
     }
 
+    /**
+     * @set linkit sivuistoille
+     * @param url
+     */
     public void clicked_btn(String url){
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));

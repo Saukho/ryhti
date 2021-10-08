@@ -2,12 +2,23 @@ package com.example.ryhtiplus;
 
 import java.util.ArrayList;
 
+/**
+ * @author Saukh
+ */
 public class CardData {
+
     private static final CardData ourInstance = new CardData();
     private ArrayList<Card> cards;
 
+    /**
+     * singleton luokka apuna
+     * @return ourInstance
+     */
     public static CardData getInstance(){ return ourInstance;}
 
+    /**
+     * lisää korttilistaan tiedot
+     */
     private CardData(){
         cards = new ArrayList<>();
         cards.add(new Card("Suojaa selkääsi",R.drawable.a1,"Hallitse keskivartaloasi"));
@@ -17,6 +28,10 @@ public class CardData {
 
     }
 
+    /**
+     *
+     * @return cards
+     */
     public ArrayList<Card> getCards() {
         return cards;
     }

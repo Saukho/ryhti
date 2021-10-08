@@ -6,8 +6,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * @author Saukh
+ */
 public class ImageCardActivity extends AppCompatActivity {
-
+    /**
+     *
+     * @param savedInstanceState
+     * @get nimi,kuva ja teksti niiden indeksin perusteella
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

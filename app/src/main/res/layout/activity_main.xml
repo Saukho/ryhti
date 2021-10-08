@@ -6,30 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/setNotifyActivity"
-        android:layout_width="298dp"
-        android:layout_height="51dp"
-        android:text="@string/buttonMainSetNotify"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7" />
-
-    <Button
-        android:id="@+id/listViewBtn"
-        android:layout_width="298dp"
-        android:layout_height="51dp"
-        android:text="Harjoitukset"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922" />
-
     <ImageView
         android:id="@+id/logoView"
         android:layout_width="375dp"
@@ -43,14 +19,40 @@
         app:srcCompat="@drawable/ryhti_logo" />
 
     <Button
+        android:id="@+id/setNotifyActivity"
+        android:layout_width="298dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="227dp"
+        android:text="@string/buttonMainSetNotify"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/listViewBtn"
+        android:layout_width="298dp"
+        android:layout_height="51dp"
+        android:text="Harjoitukset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setNotifyActivity"
+        app:layout_constraintVertical_bias="0.084" />
+
+
+    <Button
         android:id="@+id/linkViewBtn"
         android:layout_width="298dp"
         android:layout_height="51dp"
         android:text="Hyviä vinkkejä"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.805" />
+        app:layout_constraintTop_toBottomOf="@+id/listViewBtn"
+        app:layout_constraintVertical_bias="0.208" />
 </androidx.constraintlayout.widget.ConstraintLayout>

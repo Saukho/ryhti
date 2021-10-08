@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 
 import java.util.Calendar;
+
 public class AlarmHandler {
 
     private Intent intent;
@@ -30,7 +31,9 @@ public class AlarmHandler {
 
 
     public void setNewAlarm(Notification a){
-        //Tämän avulla otetaan käyttöön Manifest-luokassa määritelty Receiver = käyttäjä saa muistutukset
+        /**
+         * Tämän avulla otetaan käyttöön Manifest-luokassa määritelty Receiver = käyttäjä saa muistutukset
+         * */
         ComponentName receiver = new ComponentName(context, NotifyReceiver.class);
         PackageManager pm = context.getPackageManager();
         pm.setComponentEnabledSetting(receiver,
@@ -43,7 +46,9 @@ public class AlarmHandler {
     }
 
     public void cancelAlarm(){
-        //Tämän avulla poistetaan poistetaan Manifest-luokassa määritelty Receiver käytöstä = ei enää mustutuksia
+        /**
+       * Tämän avulla poistetaan poistetaan Manifest-luokassa määritelty Receiver käytöstä = ei enää muistutuksia
+       * */
         ComponentName receiver = new ComponentName(context, NotifyReceiver.class);
         PackageManager pm = context.getPackageManager();
         pm.setComponentEnabledSetting(receiver,
