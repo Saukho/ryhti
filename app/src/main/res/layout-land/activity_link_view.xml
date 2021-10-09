@@ -11,6 +11,7 @@
         android:id="@+id/linkView"
         android:layout_width="298dp"
         android:layout_height="51dp"
+
         android:text="Ryhdin korjaus"
         app:layout_constraintBottom_toTopOf="@+id/linkView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,6 +24,7 @@
         android:id="@+id/linkView1"
         android:layout_width="298dp"
         android:layout_height="51dp"
+
         android:layout_marginBottom="84dp"
         android:text="Minitreeni"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,11 +36,12 @@
         android:id="@+id/linkView2"
         android:layout_width="298dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="24dp"
+
+        android:layout_marginBottom="12dp"
         android:text="Yläkropan ryhti kuntoon"
         app:layout_constraintBottom_toTopOf="@+id/linkView1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
