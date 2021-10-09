@@ -36,7 +36,7 @@ public class SetNotifyActivity extends MainActivity{
         setAlarmButton = (Button) findViewById(R.id.setAlarmButton);
         cancelAlarmButton = (Button) findViewById(R.id.cancelAlarmButton);
         alarmHandler = new AlarmHandler(this, alarmManager);
-        //asetetaan tunnit ja minuutit SharedPref'sta
+        /**asetetaan tunnit ja minuutit SharedPref'sta*/
         try{
             setHour.setText(sharedPreferences.getString("SHARED_HOURS", ""));
         } catch (Exception e){
@@ -60,13 +60,13 @@ public class SetNotifyActivity extends MainActivity{
     public void setAlarm(View view){
         int hour = 0;
         int minute = 0;
-        //Tarkistaa, että tunti on kokonaisluku, muuten se on 0
+        /**Tarkistaa, että tunti on kokonaisluku, muuten se on 0*/
         try {
             hour = Integer.parseInt(setHour.getText().toString());
         }catch (NumberFormatException ex) {
 
         }
-        //Tarkistaa, että minuutit on kokonaisluku, muuten ilmoittaa siitä käyttäjälle
+        /**Tarkistaa, että minuutit on kokonaisluku, muuten ilmoittaa siitä käyttäjälle*/
         try {
             minute = Integer.parseInt(setMinute.getText().toString());
         }catch (NumberFormatException ex) {

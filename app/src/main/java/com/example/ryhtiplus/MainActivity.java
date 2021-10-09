@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     private Button listViewBtn;
     private Button linkViewBtn;
     private Button setNotify;
-    private View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

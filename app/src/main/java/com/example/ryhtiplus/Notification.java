@@ -7,7 +7,7 @@ public class Notification {
     private String notifyText;
     private boolean isEnabled;
     private int i = 0;
-    //Tällä hetkellä käytetään tästä vain "time", poistetaan muut myöhemmin
+    /**Tällä hetkellä käytetään tästä vain "time", poistetaan muut myöhemmin*/
     public Notification(long time){
         this.id = id;
         this.time = time;
