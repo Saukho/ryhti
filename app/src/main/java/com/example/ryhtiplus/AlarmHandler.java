@@ -26,11 +26,11 @@ public class AlarmHandler {
     /**
      * @use
      * @author
-     * @param a
+     * @param n
      */
 
 
-    public void setNewAlarm(Notification a){
+    public void setNewAlarm(Notification n){
         /**
          * Tämän avulla otetaan käyttöön Manifest-luokassa määritelty Receiver = käyttäjä saa muistutukset
          * */
@@ -40,14 +40,14 @@ public class AlarmHandler {
                 PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
                 PackageManager.DONT_KILL_APP);
         intent.putExtra("id", notificationId);
-        pendingIntent = PendingIntent.getBroadcast(context, a.getId(), intent, 0);
+        pendingIntent = PendingIntent.getBroadcast(context, 1, intent, 0);
         long currentime = Calendar.getInstance().getTimeInMillis();
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, currentime + a.getTime(), a.getTime(), pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, currentime + n.getTime(), n.getTime(), pendingIntent);
     }
 
     public void cancelAlarm(){
         /**
-       * Tämän avulla poistetaan poistetaan Manifest-luokassa määritelty Receiver käytöstä = ei enää muistutuksia
+       * Tämän avulla poistetaan Manifest-luokassa määritelty Receiver käytöstä = ei enää muistutuksia
        * */
         ComponentName receiver = new ComponentName(context, NotifyReceiver.class);
         PackageManager pm = context.getPackageManager();

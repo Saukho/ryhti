@@ -39,6 +39,7 @@ public class NotifyReceiver extends BroadcastReceiver {
                 .setSmallIcon(android.R.drawable.ic_dialog_alert)
                 .setContentTitle("Muista ylläpitää ryhtiä!")
                 .setContentText("Tämä on muistutus!")
+                .setSmallIcon(R.drawable.ryhti_ukko)
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setContentIntent(contentIntent)

@@ -3,34 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.31614583333333335" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/drawable/ic_launcher_background.xml" value="0.31614583333333335" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/activity_image_card.xml" value="0.22" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/activity_link_view.xml" value="0.33" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/activity_list.xml" value="0.33" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/activity_set_notif.xml" value="0.17753623188405798" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/activity_set_notify.xml" value="0.33" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/card_details.xml" value="0.33" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/item.xml" value="0.26262626262626265" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/layout_card_info.xml" value="0.1" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/layout_linkview_info.xml" value="0.14351851851851852" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/layout_listview_info.xml" value="0.1" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/practices_view.xml" value="0.2957427536231884" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.26614583333333336" />
-        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.11203703703703703" />
-        <entry key="..\:/Users/pavel/AndroidStudioProjects/ryhti/app/src/main/res/layout/activity_main.xml" value="0.215625" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/ryhti/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Roope/StudioProjects/ryhti/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3828125" />
+        <entry key="..\:/Users/Saukh/Documents/AndroidStudioProjects/RyhtiPlus/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/pavel/AndroidStudioProjects/ryhti/app/src/main/res/layout/activity_main.xml" value="0.3875" />
       </map>
     </option>
-  </component>
-  <component name="JavadocGenerationManager">
-    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../javadoc" />
-    <option name="OPTION_SCOPE" value="public" />
-    <option name="OPTION_DOCUMENT_TAG_USE" value="true" />
-    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
-    <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
-    <option name="HEAP_SIZE" value="2048" />
-    <option name="OPTION_INCLUDE_LIBS" value="true" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
