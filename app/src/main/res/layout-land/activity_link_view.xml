@@ -11,48 +11,48 @@
         android:id="@+id/linkView"
         android:layout_width="298dp"
         android:layout_height="51dp"
+        android:layout_marginTop="4dp"
 
         android:text="Ryhdin korjaus"
-        app:layout_constraintBottom_toTopOf="@+id/linkView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.727"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.943" />
+        app:layout_constraintTop_toBottomOf="@+id/logoView"  />
 
     <Button
         android:id="@+id/linkView1"
         android:layout_width="298dp"
         android:layout_height="51dp"
-
-        android:layout_marginBottom="84dp"
+        android:layout_marginTop="16dp"
         android:text="Minitreeni"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkView"  />
 
     <Button
         android:id="@+id/linkView2"
         android:layout_width="298dp"
         android:layout_height="51dp"
-
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="20dp"
         android:text="Yläkropan ryhti kuntoon"
-        app:layout_constraintBottom_toTopOf="@+id/linkView1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="168dp"
-        android:layout_height="109dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkView1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/logoView"
+        android:layout_width="196dp"
+        android:layout_height="127dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.056"
         app:srcCompat="@drawable/ryhti_logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

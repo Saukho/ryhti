@@ -18,41 +18,39 @@
         app:layout_constraintVertical_bias="0.099"
         app:srcCompat="@drawable/ryhti_logo" />
 
+
     <Button
         android:id="@+id/setNotifyActivity"
         android:layout_width="298dp"
         android:layout_height="51dp"
         android:layout_marginTop="227dp"
         android:text="@string/buttonMainSetNotify"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/linkViewBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.794" />
 
     <Button
         android:id="@+id/listViewBtn"
         android:layout_width="298dp"
         android:layout_height="51dp"
         android:text="Harjoitukset"
+        android:layout_marginBottom="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setNotifyActivity"
-        app:layout_constraintVertical_bias="0.084" />
-
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/linkViewBtn"
         android:layout_width="298dp"
         android:layout_height="51dp"
+        android:layout_marginBottom="16dp"
         android:text="Hyviä vinkkejä"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/listViewBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewBtn"
-        app:layout_constraintVertical_bias="0.208" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
