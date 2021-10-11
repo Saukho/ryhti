@@ -14,8 +14,7 @@ public class AlarmHandler {
     private Intent intent;
     private static PendingIntent pendingIntent;
     private Context context;
-    private static AlarmManager alarmManager;
-    private int notificationId = 1;
+    private static AlarmManager alarmManager;;
 
     public AlarmHandler(Context context, AlarmManager alarmManager){
         this.context = context;
@@ -26,11 +25,11 @@ public class AlarmHandler {
     /**
      * @use
      * @author
-     * @param n
+     * @param t
      */
 
 
-    public void setNewAlarm(Notification n){
+    public void setNewAlarm(Long t){
         /**
          * Tämän avulla otetaan käyttöön Manifest-luokassa määritelty Receiver = käyttäjä saa muistutukset
          * */
@@ -39,10 +38,10 @@ public class AlarmHandler {
         pm.setComponentEnabledSetting(receiver,
                 PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
                 PackageManager.DONT_KILL_APP);
-        intent.putExtra("id", notificationId);
+        intent.putExtra("id", 1);
         pendingIntent = PendingIntent.getBroadcast(context, 1, intent, 0);
         long currentime = Calendar.getInstance().getTimeInMillis();
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, currentime + n.getTime(), n.getTime(), pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, currentime + t, t, pendingIntent);
     }
 
     public void cancelAlarm(){
