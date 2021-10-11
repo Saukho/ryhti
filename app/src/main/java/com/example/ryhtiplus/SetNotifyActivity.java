@@ -91,7 +91,7 @@ public class SetNotifyActivity extends MainActivity{
         try {
             alarmHandler.cancelAlarm();
             isAlarmEnabled.setChecked(false);
-            Toast.makeText(SetNotifyActivity.this, "Muistutus on peruuttu", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SetNotifyActivity.this, "Muistutus on peruttu", Toast.LENGTH_SHORT).show();
             setHour.setText("");
             setMinute.setText("");
             isAlarmEnabled.setChecked(false);
