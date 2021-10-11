@@ -25,7 +25,6 @@ public class NotifyReceiver extends BroadcastReceiver {
     * implement onReceive() method
     * */
     public void onReceive(Context context, Intent   intent) {
-        int id = intent.getIntExtra("id",0);
         NotificationManager notifyManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -52,7 +51,7 @@ public class NotifyReceiver extends BroadcastReceiver {
                 .setContentIntent(contentIntent)
                 .setAutoCancel(true);
         /**notify*/
-        notifyManager.notify(id, notifBuilder.build());
+        notifyManager.notify(1, notifBuilder.build());
     }
 
 }
