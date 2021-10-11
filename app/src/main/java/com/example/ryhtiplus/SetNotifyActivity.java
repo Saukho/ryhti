@@ -75,11 +75,11 @@ public class SetNotifyActivity extends MainActivity{
         }
         long setTime = turnHourToMls(hour) + turnMinuteToMls(minute);
         if(setTime  >= 60000){
-            Notification notification = new Notification(1);
+            Notification notification = new Notification(setTime);
             alarmHandler.setNewAlarm(notification);
         } else {
             setTime = 1000;
-            Notification notification = new Notification(1);
+            Notification notification = new Notification(setTime);
             alarmHandler.setNewAlarm(notification);
         }
         editor = sharedPreferences.edit();
