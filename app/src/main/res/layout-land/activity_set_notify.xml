@@ -10,29 +10,14 @@
     <!--Added Toggle Button to set the alarm on or off-->
     <!--ByDefault toggleButton is set to false-->
 
-    <EditText
-        android:id="@+id/setHour"
-        android:layout_width="144dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="60dp"
-        android:ems="10"
-        android:hint="Tunnit"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/setMinute"
-        app:layout_constraintHorizontal_bias="0.899"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSetTime" />
 
-    <EditText
-        android:id="@+id/setMinute"
-        android:layout_width="144dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="60dp"
-        android:ems="10"
-        android:hint="Minuutit"
-        android:inputType="time"
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.821"
+        app:layout_constraintHorizontal_bias="0.728"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSetTime" />
 
@@ -85,10 +70,10 @@
         android:id="@+id/textViewSetTime"
         android:layout_width="186dp"
         android:layout_height="58dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="28dp"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
