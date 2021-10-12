@@ -3,48 +3,55 @@ package com.example.ryhtiplus;
 
 import android.app.AlarmManager;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TimePicker;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 
 public class SetNotifyActivity extends MainActivity{
     public static final String SHARED_PREFS = "sharedPrefs";
 
     AlarmManager alarmManager;
-    EditText setHour;
-    EditText setMinute;
     Switch isAlarmEnabled;
     Button setAlarmButton;
     Button cancelAlarmButton;
     static AlarmHandler alarmHandler;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+    TimePicker timePicker;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_notify);
         sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        setHour = findViewById(R.id.setHour);
-        setMinute = findViewById(R.id.setMinute);
+
+        timePicker = findViewById(R.id.timePicker);
         isAlarmEnabled = (Switch) findViewById(R.id.isAlarmEnabled);
         setAlarmButton = (Button) findViewById(R.id.setAlarmButton);
         cancelAlarmButton = (Button) findViewById(R.id.cancelAlarmButton);
         alarmHandler = new AlarmHandler(this, alarmManager);
+        timePicker.setIs24HourView(true);
+
         /**asetetaan tunnit ja minuutit SharedPref'sta*/
         try{
-            setHour.setText(sharedPreferences.getString("SHARED_HOURS", ""));
+            timePicker.setHour(Integer.valueOf(sharedPreferences.getString("SHARED_HOURS", "")));
         } catch (Exception e){
             Log.d("SetHoursExc",e.toString());
             return;
         }
         try{
-            setMinute.setText(sharedPreferences.getString("SHARED_MINUTES", ""));
+            timePicker.setMinute(Integer.valueOf(sharedPreferences.getString("SHARED_MINUTES", "")));
         } catch (Exception e){
             Log.d("SetMinutesExc",e.toString());
             return;
@@ -57,18 +64,19 @@ public class SetNotifyActivity extends MainActivity{
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     public void setAlarm(View view){
         int hour = 0;
         int minute = 0;
         /**Tarkistaa, että tunti on kokonaisluku, muuten se on 0*/
         try {
-            hour = Integer.parseInt(setHour.getText().toString());
+            hour = timePicker.getHour();
         }catch (NumberFormatException ex) {
 
         }
         /**Tarkistaa, että minuutit on kokonaisluku, muuten ilmoittaa siitä käyttäjälle*/
         try {
-            minute = Integer.parseInt(setMinute.getText().toString());
+            minute = timePicker.getMinute();
         }catch (NumberFormatException ex) {
             Toast.makeText(SetNotifyActivity.this, "Anna minuutit kokonaislukuna", Toast.LENGTH_SHORT).show();
             return;
@@ -87,13 +95,14 @@ public class SetNotifyActivity extends MainActivity{
         Toast.makeText(SetNotifyActivity.this, "Muistutus on asetettu", Toast.LENGTH_SHORT).show();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     public void cancelAlarm(View view){
         try {
             alarmHandler.cancelAlarm();
             isAlarmEnabled.setChecked(false);
             Toast.makeText(SetNotifyActivity.this, "Muistutus on peruttu", Toast.LENGTH_SHORT).show();
-            setHour.setText("");
-            setMinute.setText("");
+            timePicker.setHour(0);
+            timePicker.setMinute(0);
             isAlarmEnabled.setChecked(false);
             isAlarmEnabled.setText("Peruutettu");
             sharedPreferences.edit().clear().apply();
