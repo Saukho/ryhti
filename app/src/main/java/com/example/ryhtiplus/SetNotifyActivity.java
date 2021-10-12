@@ -42,6 +42,8 @@ public class SetNotifyActivity extends MainActivity{
         cancelAlarmButton = (Button) findViewById(R.id.cancelAlarmButton);
         alarmHandler = new AlarmHandler(this, alarmManager);
         timePicker.setIs24HourView(true);
+        timePicker.setHour(0);
+        timePicker.setMinute(0);
 
         /**asetetaan tunnit ja minuutit SharedPref'sta*/
         try{
