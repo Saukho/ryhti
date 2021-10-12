@@ -45,7 +45,7 @@ public class SetNotifyActivity extends MainActivity{
         timePicker.setHour(0);
         timePicker.setMinute(0);
 
-        /**asetetaan tunnit ja minuutit SharedPref'sta*/
+        /**asetetaan tunnirert ja minuutit SharedPref'sta*/
         try{
             timePicker.setHour(Integer.valueOf(sharedPreferences.getString("SHARED_HOURS", "")));
         } catch (Exception e){
