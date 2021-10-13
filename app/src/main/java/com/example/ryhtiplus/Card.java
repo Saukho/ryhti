@@ -1,10 +1,12 @@
 package com.example.ryhtiplus;
-
 /**
- * @author Saukh
- * alustaa korttisivuston tiedot
- * nimi, kuva ja teksti
+ * @author roman, pavel, mihail, sami
  */
+
+
+ //alustaa korttisivuston tiedot
+ //nimi, kuva ja teksti
+
 public class Card {
     private String name;
     private int image;
@@ -21,6 +23,7 @@ public class Card {
         this.image = image;
         this.cardText = cardText;
     }
+
     public int getImage(){return image;}
 
     public String getCardText() {

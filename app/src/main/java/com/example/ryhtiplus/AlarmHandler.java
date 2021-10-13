@@ -1,4 +1,7 @@
 package com.example.ryhtiplus;
+/**
+ * @author roman, pavel, mihail, sami
+ */
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -22,12 +25,6 @@ public class AlarmHandler {
         intent = new Intent(context, NotifyReceiver.class);
     }
 
-    /**
-     * @use
-     * @author
-     * @param t
-     */
-
 
     public void setNewAlarm(Long t){
         /**
@@ -40,8 +37,8 @@ public class AlarmHandler {
                 PackageManager.DONT_KILL_APP);
         intent.putExtra("id", 1);
         pendingIntent = PendingIntent.getBroadcast(context, 1, intent, 0);
-        long currentime = Calendar.getInstance().getTimeInMillis();
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, currentime + t, t, pendingIntent);
+        long currentTime = Calendar.getInstance().getTimeInMillis();
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, currentTime + t, t, pendingIntent);
     }
 
     public void cancelAlarm(){

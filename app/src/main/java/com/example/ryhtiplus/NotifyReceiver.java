@@ -16,7 +16,7 @@ public class NotifyReceiver extends BroadcastReceiver {
     private  static final String CHANNEL_ID = "SAMPLE_CHANNEL";
 
     /**
-     *
+     * @author roman, pavel, mihail, sami
      * @param context
      * @param intent
      */

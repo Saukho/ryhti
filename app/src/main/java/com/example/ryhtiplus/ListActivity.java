@@ -14,8 +14,13 @@ import java.util.ArrayList;
 public class ListActivity extends AppCompatActivity {
 
     /**
-     * harjoituskorttien arraylist tallennus
+     * @author roman, pavel, mihail, sami
+     * @param savedInstanceState
      */
+
+    // napit linkkeihin
+    // harjoituskorttien arraylist tallennus
+
     private ListView listViewCard;
 
     private ArrayList<String> cards;
@@ -45,6 +50,7 @@ public class ListActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public void onBackPressed() {
         finish();

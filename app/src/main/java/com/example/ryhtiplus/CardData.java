@@ -3,7 +3,7 @@ package com.example.ryhtiplus;
 import java.util.ArrayList;
 
 /**
- * @author Saukh
+ * @author roman, pavel, mihail, sami
  */
 public class CardData {
 
@@ -11,13 +11,12 @@ public class CardData {
     private ArrayList<Card> cards;
 
     /**
-     * singleton luokka apuna
      * @return ourInstance
      */
     public static CardData getInstance(){ return ourInstance;}
 
     /**
-     * lisää korttilistaan tiedot
+     * @return  lisää korttilistaan tiedot
      */
     private CardData(){
         cards = new ArrayList<>();
@@ -30,7 +29,7 @@ public class CardData {
 
     /**
      *
-     * @return cards
+     * @return cards with name, image and text
      */
     public ArrayList<Card> getCards() {
         return cards;

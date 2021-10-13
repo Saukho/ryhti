@@ -15,10 +15,10 @@ public class LinkView extends AppCompatActivity implements View.OnClickListener 
     private Button linkView2;
 
     /**
-     * @author Sami
+     * @author roman, pavel, mihail, sami
      * @param savedInstanceState
-     * napit linkkeihin
      */
+    //napit linkkeihin
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,14 +35,20 @@ public class LinkView extends AppCompatActivity implements View.OnClickListener 
     }
 
     /**
-     * @set linkit sivuistoille
+     * @set
      * @param url
      */
+    //linkit sivuistoille
     public void clicked_btn(String url){
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
         startActivity(intent);
     }
+
+    /**
+     *
+     * @param view
+     */
             public void onClick (View view){
                 switch (view.getId()) {
                     case R.id.linkView:

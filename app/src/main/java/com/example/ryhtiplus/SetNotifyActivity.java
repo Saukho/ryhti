@@ -1,6 +1,8 @@
 package com.example.ryhtiplus;
 
-
+/**
+ * @author roman, pavel, mihail, sami
+ */
 import android.app.AlarmManager;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -8,8 +10,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -28,6 +28,10 @@ public class SetNotifyActivity extends MainActivity{
     SharedPreferences.Editor editor;
     TimePicker timePicker;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +49,7 @@ public class SetNotifyActivity extends MainActivity{
         timePicker.setHour(0);
         timePicker.setMinute(0);
 
-        /**asetetaan tunnirert ja minuutit SharedPref'sta*/
+        //asetetaan tunnirert ja minuutit SharedPref'sta
         try{
             timePicker.setHour(Integer.valueOf(sharedPreferences.getString("SHARED_HOURS", "")));
         } catch (Exception e){
@@ -66,6 +70,10 @@ public class SetNotifyActivity extends MainActivity{
         }
     }
 
+    /**
+     *
+     * @param view
+     */
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void setAlarm(View view){
         int hour = 0;
@@ -97,6 +105,10 @@ public class SetNotifyActivity extends MainActivity{
         Toast.makeText(SetNotifyActivity.this, "Muistutus on asetettu", Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     *
+     * @param view
+     */
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void cancelAlarm(View view){
         try {
@@ -114,10 +126,22 @@ public class SetNotifyActivity extends MainActivity{
             return;
         }
     }
+
+    /**
+     *
+     * @param h
+     * @return
+     */
     public long turnHourToMls(int h){
         long mls = h * 1000 * 60 * 60;
         return mls;
     }
+
+    /**
+     *
+     * @param m
+     * @return
+     */
     public long turnMinuteToMls(int m){
         long mls = m * 1000 * 60;
         return mls;

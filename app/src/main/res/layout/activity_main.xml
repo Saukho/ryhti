@@ -47,7 +47,7 @@
         android:id="@+id/linkViewBtn"
         android:layout_width="298dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="12dp"
         android:text="Hyviä vinkkejä"
         app:layout_constraintBottom_toTopOf="@+id/listViewBtn"
         app:layout_constraintEnd_toEndOf="parent"

@@ -9,10 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener{
     /**
-    napit muistutukseen, linkkeihin ja harjoituksiin
-     *
      *
      */
+    //  napit muistutukseen, linkkeihin ja harjoituksiin
     private Button listViewBtn;
     private Button linkViewBtn;
     private Button setNotify;
