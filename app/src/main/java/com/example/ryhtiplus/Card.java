@@ -4,8 +4,8 @@ package com.example.ryhtiplus;
  */
 
 
- //alustaa korttisivuston tiedot
- //nimi, kuva ja teksti
+ //alustaa korttisivuston nimi, kuva ja teksti
+
 
 public class Card {
     private String name;
